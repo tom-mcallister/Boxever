@@ -1,7 +1,9 @@
+package app;
+
 import calculator.Calculator;
 import calculator.CalculatorResult;
 import calculator.DijkstraDurationCalculator;
-import collector.Collector;
+import validator.Validator;
 import loader.Loader;
 import model.Airport;
 import model.input.Route;
@@ -17,7 +19,7 @@ public class Main {
 
         List<Route> routes = getRoutes();
         List<Airport> airports = Loader.extractAirportsFromRoutes(routes);
-        Collector.Parameters inputParams = Collector.collect(airports);
+        Validator.Parameters inputParams = Validator.validate(airports);
         Calculator calculator = new DijkstraDurationCalculator(airports);
         CalculatorResult result = calculator.computeMinPath(inputParams.getDepartureAirport(), inputParams.getArrivalAirport());
 

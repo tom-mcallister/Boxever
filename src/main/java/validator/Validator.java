@@ -1,4 +1,4 @@
-package collector;
+package validator;
 
 import lombok.Builder;
 import lombok.Value;
@@ -8,14 +8,14 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class Collector {
+public class Validator {
 
 
     private static final Pattern INPUT_PATTERN = Pattern.compile("\\w\\w\\w-\\w\\w\\w");
     private static final String SUPPORTED_AIRPORTS = "DUB, LHR, BOS, CDG, LAS, LAX, NYC, ORD, BKK, SYD";
 
 
-    public static Parameters collect(List<Airport> airports) {
+    public static Parameters validate(List<Airport> airports) {
 
         Scanner scanner = new Scanner(System.in);
 

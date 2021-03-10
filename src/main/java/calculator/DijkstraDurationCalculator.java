@@ -17,7 +17,7 @@ public class DijkstraDurationCalculator implements Calculator {
     }
 
     @Value
-    static class DijkstraResult implements CalculatorResult {
+    private static class DijkstraResult implements CalculatorResult {
         List<String> path;
         List<Integer> durations;
         int duration;
