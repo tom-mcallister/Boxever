@@ -55,7 +55,7 @@ public class DijkstraDurationCalculator implements Calculator {
                     int oldDist = durationToReachByAirport.get(neighbourAirportCode);
                     if (dist < oldDist) {
                         durationToReachByAirport.put(neighbourAirportCode, dist);
-                        prevNode.put(neighbour.getKey() , currentAirportCode);
+                        prevNode.put(neighbour.getKey(), currentAirportCode);
                     }
                     openSet.add(new AirportDistance(neighbourAirportCode, durationToReachByAirport.get(neighbourAirportCode)));
                 }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @Data
 @Builder
 @AllArgsConstructor
-public class Airport  {
+public class Airport {
 
     private String name;
     private Map<String, Integer> connections;

@@ -11,8 +11,8 @@ public class AirportFixture {
         List<Airport> airports = new ArrayList<>();
         airports.add(airportBuilder(Map.of("LHR", 1, "CDG", 2, "ORD", 6), "DUB"));
         airports.add(airportBuilder(Map.of("DUB", 1, "BKK", 9, "NYC", 5), "LHR"));
-        airports.add(airportBuilder(Map.of("DUB",2, "BOS",6, "BKK", 9), "CDG"));
-        airports.add(airportBuilder(Map.of("ORD", 2, "NYC", 3, "LAX",2, "SYD", 14), "LAS"));
+        airports.add(airportBuilder(Map.of("DUB", 2, "BOS", 6, "BKK", 9), "CDG"));
+        airports.add(airportBuilder(Map.of("ORD", 2, "NYC", 3, "LAX", 2, "SYD", 14), "LAS"));
         airports.add(airportBuilder(Map.of("LHR", 5, "LAS", 3), "NYC"));
         airports.add(airportBuilder(Map.of("LAS", 2, "DUB", 6), "ORD"));
         airports.add(airportBuilder(Map.of("CDG", 6, "LAX", 4), "BOS"));
@@ -24,7 +24,7 @@ public class AirportFixture {
     }
 
 
-    public static Airport airportBuilder (Map<String, Integer> connections, String name) {
+    public static Airport airportBuilder(Map<String, Integer> connections, String name) {
         return Airport.builder()
                 .connections(connections)
                 .name(name)

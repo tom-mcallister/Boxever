@@ -16,14 +16,14 @@ public interface CalculatorResult {
         List<String> path = getPath();
         List<Integer> durations = getDurations();
 
-        for(int i = 0; i < path.size() -1; i++) {
+        for (int i = 0; i < path.size() - 1; i++) {
             String source = path.get(i);
-            String destination = path.get(i+1);
+            String destination = path.get(i + 1);
             stringBuilder.append(source);
             stringBuilder.append(" -- ");
             stringBuilder.append(destination);
             stringBuilder.append(" (");
-            stringBuilder.append(durations.get(i+1) - durations.get(i));
+            stringBuilder.append(durations.get(i + 1) - durations.get(i));
             stringBuilder.append(")\n");
 
         }

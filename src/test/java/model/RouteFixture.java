@@ -33,7 +33,7 @@ public class RouteFixture {
     }
 
 
-    public static Route routeBuilder (String departureAirport, String arrivalAirport, int duration) {
+    public static Route routeBuilder(String departureAirport, String arrivalAirport, int duration) {
         return Route.builder()
                 .departureAirportIataCode(departureAirport)
                 .arrivalAirportIataCode(arrivalAirport)

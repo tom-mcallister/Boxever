@@ -11,6 +11,5 @@ public class Route {
     private String departureAirportIataCode;
     @NonNull
     private String arrivalAirportIataCode;
-    @NonNull
     private int duration;
 }

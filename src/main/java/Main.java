@@ -1,6 +1,7 @@
 import calculator.Calculator;
 import calculator.CalculatorResult;
 import calculator.DijkstraDurationCalculator;
+import collector.Collector;
 import loader.Loader;
 import model.Airport;
 import model.input.Route;

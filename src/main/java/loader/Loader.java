@@ -17,7 +17,7 @@ public class Loader {
 
     public static List<Airport> extractAirportsFromRoutes(List<Route> routes) {
         Set<String> airportIataCodes = new HashSet<>();
-        for(Route route : routes){
+        for (Route route : routes) {
             airportIataCodes.add(route.getDepartureAirportIataCode());
             airportIataCodes.add(route.getArrivalAirportIataCode());
         }
@@ -34,7 +34,7 @@ public class Loader {
                 .filter(r -> r.getDepartureAirportIataCode().equals(code) || r.getArrivalAirportIataCode().equals(code))
                 .collect(Collectors.toList());
 
-        for(Route filteredRoute : filteredRoutes) {
+        for (Route filteredRoute : filteredRoutes) {
             String connectionName = extractConnectionName(filteredRoute, code);
             connections.put(connectionName, filteredRoute.getDuration());
         }
@@ -50,7 +50,7 @@ public class Loader {
     public static List<Route> loadRoutes(String fileName) throws IOException {
         Iterable<CSVRecord> records = readCsv(fileName);
         List<Route> routes = new ArrayList<>();
-        for(CSVRecord record : records) {
+        for (CSVRecord record : records) {
             Route route = parseRoute(record);
             routes.add(route);
         }
