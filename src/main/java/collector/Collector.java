@@ -11,14 +11,16 @@ import java.util.regex.Pattern;
 public class Collector {
 
 
-    private static Pattern INPUT_PATTERN = Pattern.compile("\\w\\w\\w-\\w\\w\\w");
+    private static final Pattern INPUT_PATTERN = Pattern.compile("\\w\\w\\w-\\w\\w\\w");
+    private static final String SUPPORTED_AIRPORTS = "DUB, LHR, BOS, CDG, LAS, LAX, NYC, ORD, BKK, SYD";
 
 
     public static Parameters collect(List<Airport> airports) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please enter your Departure Iata code and Arrival Iata code separated by a '-'");
+        System.out.println("Please enter your Departure iata code and Arrival iata code separated by a '-'");
+        System.out.println("Supported airports are " + SUPPORTED_AIRPORTS);
 
         while (true) {
             if (scanner.hasNext(INPUT_PATTERN)) {
@@ -31,7 +33,7 @@ public class Collector {
                     return new Parameters(departureAirport, arrivalAirport);
                 }
             } else {
-                System.out.println("Invalid input, try again");
+                System.out.println("Please ensure that your input matches the required format and that your selected airports are supported");
                 scanner.nextLine(); // flush invalid input
             }
         }
