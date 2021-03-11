@@ -5,7 +5,7 @@ Program that calculates the shortest duration between two airports.
 ## What the App does
 Takes String input from the user, that correspond to the iata codes for supported airports.
 
-After performing some light validation an implementation of Dijkstras Algorithm to find the shortest duration between the two supported Airports.
+After performing some light validation an implementation of Dijkstra's Algorithm is used to find the shortest duration between the two supported Airports.
 
 # Brief description of steps
 - The routes that were provided as part of the spec are loaded into Route objects
