@@ -1,4 +1,4 @@
-# Boxever
+# Boxever - Coding Challenge
 Program that calculates the shortest duration between two airports.
 
 
