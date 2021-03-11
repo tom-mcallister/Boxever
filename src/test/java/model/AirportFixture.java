@@ -24,7 +24,7 @@ public class AirportFixture {
     }
 
 
-    public static Airport airportBuilder(Map<String, Integer> connections, String name) {
+    private static Airport airportBuilder(Map<String, Integer> connections, String name) {
         return Airport.builder()
                 .connections(connections)
                 .name(name)

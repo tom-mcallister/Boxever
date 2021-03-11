@@ -1,6 +1,5 @@
 package model;
 
-import model.Airport;
 import model.input.Route;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class RouteFixture {
     }
 
 
-    public static Route routeBuilder(String departureAirport, String arrivalAirport, int duration) {
+    private static Route routeBuilder(String departureAirport, String arrivalAirport, int duration) {
         return Route.builder()
                 .departureAirportIataCode(departureAirport)
                 .arrivalAirportIataCode(arrivalAirport)
